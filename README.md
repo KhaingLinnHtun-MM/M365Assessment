@@ -1,6 +1,7 @@
 # 🚀 M365 Assessment Consultant Toolkit
 
-A complete toolkit to perform Microsoft 365 security assessments and generate an **interactive enterprise dashboard (Fluent UI style)**.
+A Draft Version toolkit to perform Microsoft 365 security assessments and generate an **interactive enterprise dashboard (Fluent UI style)**.
+Next update will contain will be related with SPO.
 
 ---
 
@@ -17,3 +18,37 @@ A complete toolkit to perform Microsoft 365 security assessments and generate an
 ---
 
 ## 📂 Project Structure
+
+---
+
+## ⚙️ Prerequisites
+
+- PowerShell 5.1+
+- Microsoft Graph modules
+- Required permissions:
+  - Directory.Read.All
+  - SecurityEvents.Read.All
+  - Reports.Read.All
+
+---
+
+## 🚀 Step-by-Step Usage
+
+### ✅ Step 1 — Run Assessment Script
+
+```powershell
+.\scripts\M365_Assessment_Report_Generator_Consultant_FINAL.ps1
+
+📂 Output:
+M365_Assessment_Consultant_YYYYMMDD_HHMMSS
+
+###✅ Step 2 — Copy Dashboard Script
+copy .\scripts\M365_Assessment_Dashboard_Generator_ENTERPRISE_v4.ps1 <OutputFolder>\
+
+###✅ Step 3 — Run Dashboard Generator
+cd <OutputFolder>
+.\M365_Assessment_Dashboard_Generator_ENTERPRISE_v4.ps1 -OutputRoot "."
+
+
+###✅ Step 4 — Open Dashboard
+00_Dashboard_ENTERPRISE.html
